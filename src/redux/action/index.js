@@ -1,0 +1,5 @@
+export const ActionTypes = {
+    FETCH_MOVIES : 'FETCH_MOVIES',
+    SELECT_MOVIE : 'SELECT_MOVIE',
+    UNSELECT_MOVIE : 'UNSELECT_MOVIE'
+};
