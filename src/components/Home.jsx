@@ -1,24 +1,27 @@
-import React from 'react'
-import { Button, Navbar } from "flowbite-react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react'
 import Movies from './Movies';
+import { api, apiKey } from '../api/apiResource';
+import { useDispatch } from 'react-redux';
+import { fetchMovies } from '../redux/action/movie';
 
 const Home = () => {
+
+    const dispatch = useDispatch();
+
+    const getMovies = async () => {
+        const response = await api.get(`now_playing?api_key=${apiKey}`);
+        dispatch(fetchMovies(response.data.results));
+    }
+
+    useEffect(() => {
+        getMovies();
+    }, []);
+
     return (
         <div>
-            <Navbar fluid rounded>
-                <Navbar.Brand href="https://flowbite-react.com">
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Movie Site</span>
-                </Navbar.Brand>
-                <div className="flex md:order-2">
-                    <Button className='text-gray-800'>Get started</Button>
-                    <Navbar.Toggle />
-                </div>
-            </Navbar>
-
             <Movies />
-
         </div>
-
     )
 }
 
