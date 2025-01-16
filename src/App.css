@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.login-bg{
+    background: url(https://michaelaganezer.com/wp-content/uploads/2020/10/movie-posters.jpg) rgba(17, 24, 39, 0.5);
+    background-blend-mode: multiply;
+}

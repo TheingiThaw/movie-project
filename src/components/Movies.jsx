@@ -1,11 +1,9 @@
 import React from 'react'
-import Movie from './Movie'
-import { useSelector } from 'react-redux'
 import { Carousel } from "flowbite-react";
 import { Link } from 'react-router';
 
 const Movies = () => {
-    const movies = useSelector(state => state.movies.movies);
+
 
     return (
         <div>
