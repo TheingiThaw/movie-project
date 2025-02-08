@@ -105,7 +105,7 @@ const Home = () => {
 
                         {trendingMovies.length !== 0 ?
                             trendingMovies.slice(0, 4).map(movie => (
-                                <Link to={`movies/trending/${movie.id}`} key={movie.id}>
+                                <Link to={`movie/trending/${movie.id}`} key={movie.id}>
                                     <div className="w-52 h-52 text-sm bg-gray-900 text-white border-0 relative">
                                         <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='rounded-md h-32' alt="" />
                                         <div className="flex justify-between">
@@ -150,7 +150,7 @@ const Home = () => {
 
                         {nowplayingmovies.length !== 0 ?
                             nowplayingmovies.slice(0, 4).map(movie => (
-                                <Link to={`movies/playing/${movie.id}`} key={movie.id}>
+                                <Link to={`movie/playing/${movie.id}`} key={movie.id}>
                                     <div className="w-52 h-96 text-sm text-white border-0 relative">
                                         <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='rounded-md w-full h-80' alt="" />
                                         <div className="flex justify-between mt-2">
@@ -178,7 +178,7 @@ const Home = () => {
                     <div className="mx-auto flex flex-wrap gap-4 mt-5 justify-center lg:w-3/4">
                         {series.length !== 0 ?
                             series.slice(0, 4).map(movie => (
-                                <Link to={`movies/series/${movie.id}`} key={movie.id}>
+                                <Link to={`movie/series/${movie.id}`} key={movie.id}>
                                     <div className="w-52 h-96 text-sm text-white border-0 relative">
                                         <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='rounded-md w-full h-80' alt="" />
                                         <div className="flex justify-between mt-2">

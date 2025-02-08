@@ -6,12 +6,13 @@ import { api, apiKey } from '../api/apiResource';
 import { Spinner } from "flowbite-react";
 
 const Detail = () => {
-    const { id } = useParams();
+    const { id, type, situation } = useParams();
     const [movie, setMovie] = useState('');
-    console.log(movie);
+
+    console.log(id, type, situation);
 
     const getMovie = async () => {
-        const response = await api.get(`${id}?api_key=${apiKey}`);
+        const response = await api.get(`${type}/${id}?api_key=${apiKey}`);
         setMovie(response.data);
     }
 

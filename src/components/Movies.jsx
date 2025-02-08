@@ -3,8 +3,6 @@ import { Carousel } from "flowbite-react";
 import { Link } from 'react-router';
 
 const Movies = () => {
-
-
     return (
         <div>
             <div className="h-full">
